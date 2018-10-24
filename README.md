@@ -1,3 +1,5 @@
+# THIS A CMAKE VERSION OF EDFlib
+
 # EDFlib
 
 EDFlib is a programming library for C/C++ for reading and writing EDF+ and BDF+ files.
