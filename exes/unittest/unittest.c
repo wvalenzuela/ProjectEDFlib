@@ -36,7 +36,11 @@
 
 #define  JUMP_TO_EXIT_ERROR_PROC   {line = __LINE__; goto OUT_ERROR;}
 
-
+#ifdef _WIN32
+#define OPEN_MODE "rb"
+#else
+#define OPEN_MODE "r+b"
+#endif
 int dblcmp(double, double);
 int dblcmp_lim(double, double, double);
 
@@ -1029,7 +1033,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1045,7 +1049,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1065,7 +1069,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1085,7 +1089,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1105,7 +1109,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1125,7 +1129,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1145,7 +1149,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1165,7 +1169,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1185,7 +1189,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1205,7 +1209,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1225,7 +1229,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1245,7 +1249,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1265,7 +1269,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1285,7 +1289,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1305,7 +1309,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1325,7 +1329,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1345,7 +1349,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1365,7 +1369,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1385,7 +1389,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1401,7 +1405,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1421,7 +1425,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1437,7 +1441,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1457,7 +1461,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1475,7 +1479,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1500,7 +1504,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1516,7 +1520,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -1536,7 +1540,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.edf", "r+b");
+  fp = fopen("test.edf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2608,7 +2612,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2624,7 +2628,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2644,7 +2648,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2664,7 +2668,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2684,7 +2688,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2700,7 +2704,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2720,7 +2724,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2736,7 +2740,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2752,7 +2756,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2768,7 +2772,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2784,7 +2788,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2800,7 +2804,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2816,7 +2820,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
@@ -2836,7 +2840,7 @@ int main(void)
 
   /****************************************/
 
-  fp = fopen("test.bdf", "r+b");
+  fp = fopen("test.bdf", OPEN_MODE);
 
   if(fp == NULL)  JUMP_TO_EXIT_ERROR_PROC
 
