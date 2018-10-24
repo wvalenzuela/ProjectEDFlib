@@ -182,8 +182,11 @@ int main(int argc, char *argv[])
   }
 
   n = 200; /* read n samples from the file */
-
+#ifdef WIN32
+  buf = (double *)malloc(sizeof(double[200]));
+#else
   buf = (double *)malloc(sizeof(double[n]));
+#endif
   if(buf==NULL)
   {
     printf("\nmalloc error\n");

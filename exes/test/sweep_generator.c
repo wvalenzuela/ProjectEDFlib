@@ -35,10 +35,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 #include "edflib.h"
+#include <math.h>
 
+#ifdef WIN32
+//#include <amp.h>
+//#include <amp_math.h>
+//using namespace concurrency;
+//using namespace concurrency::precise_math; // 4
+#else
+#endif
 
 
 
@@ -60,8 +67,13 @@ int main(void)
       fileduration=300,
       linear=0;
 
-  double buf[smp_freq],
-         q,
+#ifdef WIN32
+  double buf[8192];
+#else
+  double buf[smp_freq];
+#endif
+
+  double q,
          sine_1,
          startfreq=10.0,
          stopfreq=4095.0,
@@ -77,7 +89,7 @@ int main(void)
 #if defined(__APPLE__) || defined(__MACH__) || defined(__APPLE_CC__)
 #define expo __exp10
 #else
-#define expo exp10
+#define expo(x) exp(x*log(10))
 #endif
 
 

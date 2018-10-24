@@ -43,7 +43,9 @@
 #include <string.h>
 #include <time.h>
 
-
+#ifndef M_PI
+#define M_PI	3.14159265358979323846264338327950288 /* pi						*/	
+#endif // !M_PI
 
 #define EDFLIB_TIME_DIMENSION (10000000LL)
 #define EDFLIB_MAXSIGNALS 640
