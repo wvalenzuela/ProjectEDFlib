@@ -46,7 +46,13 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}
 
 # ======================================================================
 ADD_EXECUTABLE(${PROJECT_NAME} unittest.c)
-TARGET_LINK_LIBRARIES(${PROJECT_NAME} EDFlib m)
+IF(WIN32)
+	TARGET_LINK_LIBRARIES(${PROJECT_NAME} EDFlib)
+	MESSAGE("Skipping library M")
+ELSE()
+	MESSAGE("Adding library M")
+	TARGET_LINK_LIBRARIES(${PROJECT_NAME} EDFlib m)
+ENDIF()
 # ======================================================================
 # ======================================================================
 TARGET_INCLUDE_DIRECTORIES(${PROJECT_NAME} PUBLIC 

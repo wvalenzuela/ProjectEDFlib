@@ -43,19 +43,25 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}
 
 # Must be added to enable export macro
 # ADD_DEFINITIONS(-DQUAZIP_BUILD)
-
+SET(LIB_M )
+IF(NOT WIN32)
+	SET(LIB_M m)
+	MESSAGE("Adding library M")
+ELSE()
+	MESSAGE("Skipping library M")
+ENDIF()
 # ======================================================================
 ADD_EXECUTABLE(sweep_generator sweep_generator.c)
-TARGET_LINK_LIBRARIES(sweep_generator EDFlib m)
+TARGET_LINK_LIBRARIES(sweep_generator EDFlib ${LIB_M})
 # ======================================================================
 ADD_EXECUTABLE(sine_generator sine_generator.c)
-TARGET_LINK_LIBRARIES(sine_generator EDFlib m)
+TARGET_LINK_LIBRARIES(sine_generator EDFlib ${LIB_M})
 # ======================================================================
 ADD_EXECUTABLE(test_edflib test_edflib.c)
-TARGET_LINK_LIBRARIES(test_edflib EDFlib m)
+TARGET_LINK_LIBRARIES(test_edflib EDFlib ${LIB_M})
 # ======================================================================
 ADD_EXECUTABLE(test_generator test_generator.c)
-TARGET_LINK_LIBRARIES(test_generator EDFlib m)
+TARGET_LINK_LIBRARIES(test_generator EDFlib ${LIB_M})
 # ======================================================================
 # ======================================================================
 INCLUDE(InstallRequiredSystemLibraries)
