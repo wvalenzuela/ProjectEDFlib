@@ -46,16 +46,16 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}
 
 # ======================================================================
 ADD_EXECUTABLE(sweep_generator sweep_generator.c)
-TARGET_LINK_LIBRARIES(sweep_generator EDFlib)
+TARGET_LINK_LIBRARIES(sweep_generator EDFlib m)
 # ======================================================================
 ADD_EXECUTABLE(sine_generator sine_generator.c)
-TARGET_LINK_LIBRARIES(sine_generator EDFlib)
+TARGET_LINK_LIBRARIES(sine_generator EDFlib m)
 # ======================================================================
 ADD_EXECUTABLE(test_edflib test_edflib.c)
-TARGET_LINK_LIBRARIES(test_edflib EDFlib)
+TARGET_LINK_LIBRARIES(test_edflib EDFlib m)
 # ======================================================================
 ADD_EXECUTABLE(test_generator test_generator.c)
-TARGET_LINK_LIBRARIES(test_generator EDFlib)
+TARGET_LINK_LIBRARIES(test_generator EDFlib m)
 # ======================================================================
 # ======================================================================
 INCLUDE(InstallRequiredSystemLibraries)
