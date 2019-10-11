@@ -290,8 +290,11 @@ int edfopen_file_readonly(const char *path, struct edf_hdr_struct *edfhdr, int r
       }
     }
   }
-
+#ifdef _WIN32
+  file = fopeno(path, "r+b");
+#else
   file = fopeno(path, "rb");
+#endif
   if(file==NULL)
   {
     edfhdr->filetype = EDFLIB_NO_SUCH_FILE_OR_DIRECTORY;
